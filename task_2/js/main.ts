@@ -15,7 +15,7 @@ function isDirector(employee: Director | Teacher): employee is Director {
 
 function executeWork(employee: Director | Teacher) {
   if (isDirector(employee)) {
-    return employee.workDirectorTasks;
+    return employee.workDirectorTasks();
   }
-  return employee.workTeacherTasks;
+  return employee.workTeacherTasks();
 }
