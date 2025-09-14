@@ -4,33 +4,35 @@
 /// <reference path="./subjects/Java.ts" />
 /// <reference path="./subjects/React.ts" />
 
-// Create and export constants for each subject
-const cpp = new Subjects.Cpp()
-const java = new Subjects.Java();
-const react = new Subjects.React();
+import Subjects from "./subjects";
 
-// Create and export Teacher object with experienceTeachingC = 10
-const cTeacher: Subjects.Teacher = {
+// Create and export constants for each subject
+export const cpp = new Subjects.Cpp();
+export const java = new Subjects.Java();
+export const react = new Subjects.React();
+
+// Create and export a Teacher object
+export const cTeacher: Subjects.Teacher = {
   firstName: "John",
   lastName: "Doe",
   experienceTeachingC: 10,
+  experienceTeachingJava: 5,
+  experienceTeachingReact: 3,
 };
 
-export { cpp, java, react, cTeacher };
-
-// For Cpp subject
+// C++ Section
 console.log("C++");
 cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-// For Java subject
+// Java Section
 console.log("Java");
 java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-// For React subject
+// React Section
 console.log("React");
 react.setTeacher(cTeacher);
 console.log(react.getRequirements());
