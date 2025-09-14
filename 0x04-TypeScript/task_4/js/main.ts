@@ -5,16 +5,18 @@
 /// <reference path="./subjects/React.ts" />
 
 // Create and export constants for each subject
-export const cpp = new Subjects.Cpp()
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
+const cpp = new Subjects.Cpp()
+const java = new Subjects.Java();
+const react = new Subjects.React();
 
 // Create and export Teacher object with experienceTeachingC = 10
-export const cTeacher: Subjects.Teacher = {
+const cTeacher: Subjects.Teacher = {
   firstName: "John",
   lastName: "Doe",
   experienceTeachingC: 10,
 };
+
+export { cpp, java, react, cTeacher };
 
 // For Cpp subject
 console.log("C++");
